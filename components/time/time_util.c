@@ -48,7 +48,7 @@ time_t getUnixTime(void) {
     time(&now);
 
     // adjust to account for flashing time (6s - 15s)
-    now = now + FLASH_TIME; 
+    now += FLASH_TIME; 
 
     // printf("from build: %lld\n", now);
     return now;
