@@ -4,12 +4,12 @@
 
 # Unix Epoch Display
 
-A unix timestamp clock for my friend
+A UNIX timestamp clock for my friend
 
 ## Parts
 
 - ESP32 C3 super mini
-- ST7789 2.25" display
+- 10 digit 7 segment array
 - Switch
 - Case (3d printed)
 
@@ -19,15 +19,21 @@ A unix timestamp clock for my friend
     unix_epoch_display/
     ├── .gitignore
     ├── README.md
-    ├── roadmap.md
     ├── assets/
     |   ├── public/
     |   └── designs/
+    ├── components
+    │   ├── display
+    │   │   ├── display.c
+    │   │   └── display.h
+    │   ├── ds1302
+    │   │   ├── ds1302.c
+    │   │   └── ds1302.h
+    │   └── time
+    │       ├── time_util.c
+    │       └── time_util.h
     └── main/
-        ├──drivers/
-        |   ├── display.cpp
-        |   └── clock.cpp
-        └── main.cpp
+        └── unix_epoch_display.c
 ```
 
 ## Contact
